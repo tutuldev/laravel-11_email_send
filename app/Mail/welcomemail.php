@@ -38,7 +38,8 @@ class welcomemail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'mail.welcome-mail',
+            // view: 'mail.welcome-mail',
+            text: 'mail.welcome-mail',
         );
     }
 
