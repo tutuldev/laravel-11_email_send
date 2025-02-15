@@ -9,8 +9,13 @@
 <body>
 <h3>{{$subject}}</h3>
 <p>{{$mailmessage}}</p>
-<p>{{$details['name']}}</p>
+{{-- <p>{{$details['name']}}</p>
 <p>{{$details['product']}}</p>
-<p>{{$details['price']}}</p>
+<p>{{$details['price']}}</p> --}}
+{{-- when using prive method  --}}
+<p>{{$name}}</p>
+<p>{{$product}}</p>
+<p>{{$price}}</p>
+
 </body>
 </html>

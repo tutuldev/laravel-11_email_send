@@ -15,7 +15,8 @@ class welcomemail extends Mailable
 
    public $mailmessage;
    public $subject;
-   public $details;
+//    public $details;
+   private $details;
     public function __construct($message,$subject,$details)
     {
         $this->mailmessage =$message;
@@ -42,6 +43,12 @@ class welcomemail extends Mailable
         return new Content(
             // text: 'mail.welcome-mail',
             view: 'mail.welcome-mail',
+            // with when using privet method 
+            with:[
+                'name' =>$this->details['name'],
+                'product' =>$this->details['product'],
+                'price' =>$this->details['price'],
+            ]
         );
     }
 
