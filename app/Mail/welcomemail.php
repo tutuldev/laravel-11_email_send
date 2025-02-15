@@ -15,10 +15,12 @@ class welcomemail extends Mailable
 
    public $mailmessage;
    public $subject;
-    public function __construct($message,$subject)
+   public $details;
+    public function __construct($message,$subject,$details)
     {
         $this->mailmessage =$message;
         $this->subject =$subject;
+        $this->details =$details;
     }
 
     /**
@@ -38,8 +40,8 @@ class welcomemail extends Mailable
     public function content(): Content
     {
         return new Content(
-            // view: 'mail.welcome-mail',
-            text: 'mail.welcome-mail',
+            // text: 'mail.welcome-mail',
+            view: 'mail.welcome-mail',
         );
     }
 
